@@ -1,0 +1,7 @@
+{
+  "name": "banjarmasin-aio",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
