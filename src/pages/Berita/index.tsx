@@ -33,36 +33,33 @@ const Berita: React.FC = () => {
     content = <div>ada data</div>;
   }
 
-  let contoh = (
-    <IonCard>
-      <IonImg src="http://placekitten.com/g/600/300" />
-      <IonCardHeader>
-        <IonCardTitle></IonCardTitle>
-        <IonCardSubtitle>Destination</IonCardSubtitle>
-      </IonCardHeader>
-      <IonCardContent>
-        Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,
-        Madison was named the capital of the Wisconsin Territory in 1836.
-      </IonCardContent>
-    </IonCard>
-  );
+  let contoh: any = [];
 
-  for (let index = 0; index <= 5; index++) {
-    const element = "Aku ada " + index;
+  for (let index = 0; index < 5; index++) {
+    contoh.push(
+      <IonCard>
+        <IonImg src="http://placekitten.com/g/600/300" />
+        <IonCardHeader>
+          <IonCardTitle></IonCardTitle>
+          <IonCardSubtitle>Destination</IonCardSubtitle>
+        </IonCardHeader>
+        <IonCardContent>
+          Founded in 1829 on an isthmus between Lake Monona and Lake Mendota,
+          Madison was named the capital of the Wisconsin Territory in 1836.
+        </IonCardContent>
+      </IonCard>
+    );
   }
 
+  const number: any = ["satu", "dua", "tiga"];
   return (
     <IonPage>
       <IonHeader translucent>
         <IonToolbar>
-          <IonTitle>Habar Terkini</IonTitle>
+          <IonTitle className="ion-text-center">Habar Terkini</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent>
-        {contoh}
-        {contoh}
-        {contoh}
-      </IonContent>
+      <IonContent>{contoh}</IonContent>
     </IonPage>
   );
 };

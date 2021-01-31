@@ -55,6 +55,26 @@ const slideOpts = {
   speed: 400,
 };
 
+let event: any = [];
+
+for (let index = 0; index < 5; index++) {
+  event.push(
+    <IonSlide>
+      <IonCard>
+        <IonCardHeader>
+          <IonImg src="https://i.ibb.co/jD8ypLq/files.jpg" className="files" />
+        </IonCardHeader>
+        <IonCardContent className="ion-text-left">
+          <IonCardTitle className="ion-margin-bottom">
+            Judul {index + 1}
+          </IonCardTitle>
+          <IonCardSubtitle>31 Januari 2021</IonCardSubtitle>
+        </IonCardContent>
+      </IonCard>
+    </IonSlide>
+  );
+}
+
 const Dashboard: React.FC = () => {
   return (
     <IonPage>
@@ -118,38 +138,7 @@ const Dashboard: React.FC = () => {
           Berita
         </IonTitle>
         <IonSlides pager={true} options={slideOpts}>
-          <IonSlide>
-            <IonCard>
-              <IonCardHeader>
-                <IonImg
-                  src="https://i.ibb.co/jD8ypLq/files.jpg"
-                  className="files"
-                />
-              </IonCardHeader>
-              <IonCardContent className="ion-text-left">
-                <IonCardTitle className="ion-margin-bottom">
-                  Judul 1
-                </IonCardTitle>
-                <IonCardSubtitle>31 Januari 2021</IonCardSubtitle>
-              </IonCardContent>
-            </IonCard>
-          </IonSlide>
-          <IonSlide>
-            <IonCard>
-              <IonCardHeader>
-                <IonImg
-                  src="https://i.ibb.co/jD8ypLq/files.jpg"
-                  className="files"
-                />
-              </IonCardHeader>
-              <IonCardContent className="ion-text-left">
-                <IonCardTitle className="ion-margin-bottom">
-                  Judul 2
-                </IonCardTitle>
-                <IonCardSubtitle>30 Januari 2021</IonCardSubtitle>
-              </IonCardContent>
-            </IonCard>
-          </IonSlide>
+          {event}
         </IonSlides>
       </IonContent>
     </IonPage>
