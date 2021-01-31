@@ -1,5 +1,5 @@
 {
-  "appId": "io.ionic.starter",
+  "appId": "com.diskominfotik.banjarmasinaio",
   "appName": "banjarmasin-aio",
   "bundledWebRuntime": false,
   "npmClient": "npm",
