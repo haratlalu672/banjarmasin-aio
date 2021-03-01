@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">banjarmasin-aio</string>
+    <string name="title_activity_main">banjarmasin-aio</string>
+    <string name="package_name">com.diskominfotik.banjarmasinaio</string>
+    <string name="custom_url_scheme">com.diskominfotik.banjarmasinaio</string>
+    <string name="server_client_id">186512260939-2daat5lg9femaga21u0tgp84q9uc7tmp.apps.googleusercontent.com</string>
+</resources>

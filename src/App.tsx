@@ -10,14 +10,7 @@ import {
   IonTabs,
 } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
-import {
-  ellipse,
-  homeOutline,
-  newspaperOutline,
-  personOutline,
-  square,
-  triangle,
-} from "ionicons/icons";
+import { homeOutline, newspaperOutline, personOutline } from "ionicons/icons";
 import Tab1 from "./pages/Dashboard";
 import Tab2 from "./pages/Berita";
 import Tab3 from "./pages/Akun";
@@ -40,6 +33,8 @@ import "@ionic/react/css/display.css";
 
 /* Theme variables */
 import "./theme/variables.css";
+import Login from "./pages/Login";
+import Registrasi from "./pages/Registrasi";
 
 const App: React.FC = () => (
   <IonApp>
@@ -48,12 +43,22 @@ const App: React.FC = () => (
         <IonRouterOutlet>
           <Route path="/berita" component={Tab2} exact={true} />
           <Route path="/dashboard" component={Tab1} exact={true} />
-          <Route path="/akun" component={Tab3} />
+          <Route exact path="/akun" component={Tab3} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/registrasi" component={Registrasi} />
           <Route
             path="/"
-            render={() => <Redirect to="/Dashboard" />}
+            render={() => <Redirect to="/dashboard" />}
             exact={true}
           />
+
+          {/* <Route
+            exact
+            path="/login"
+            render={() => {
+              return isAuth ? <Redirect to="/registrasi" /> : "";
+            }}
+          /> */}
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
           <IonTabButton tab="berita" href="/berita">

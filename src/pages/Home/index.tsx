@@ -21,7 +21,6 @@ import {
   IonRow,
   IonSlide,
   IonSlides,
-  IonTitle,
   IonToolbar,
 } from "@ionic/react";
 import "./Style.css";
@@ -31,7 +30,6 @@ import {
   ellipsisVertical,
   filmOutline,
   notifications,
-  square,
 } from "ionicons/icons";
 
 const slideOptions = {

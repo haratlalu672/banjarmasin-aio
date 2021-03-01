@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import axios from "axios";
 
 function useAxiosGet(url: any) {
@@ -7,7 +7,7 @@ function useAxiosGet(url: any) {
         data: null,
         error: false
     })
-
+    // , {headers: {'Access-Control-Allow-Origin' : '*'}}
     useEffect(() => {
         setRequest({
             loading: true,
@@ -29,7 +29,6 @@ function useAxiosGet(url: any) {
                 })
             })
     }, [url])
-
     return request
 }
 

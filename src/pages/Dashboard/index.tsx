@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  IonButton,
   IonCard,
   IonCardContent,
   IonCardHeader,
@@ -12,43 +11,30 @@ import {
   IonHeader,
   IonIcon,
   IonImg,
-  IonItem,
-  IonLabel,
-  IonList,
   IonPage,
-  IonProgressBar,
   IonRow,
   IonSlide,
   IonSlides,
   IonText,
-  IonThumbnail,
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
 import "./Style.css";
 import {
   logoApple,
-  logoFacebook,
-  logoGoogle,
   logoHtml5,
-  logoInstagram,
   logoIonic,
-  logoJavascript,
   logoLaravel,
   logoReact,
   logoTiktok,
   logoTumblr,
   logoVue,
-  logoWhatsapp,
 } from "ionicons/icons";
 
 type Item = {
   src: string;
   text: string;
 };
-const items: Item[] = [
-  { src: "http://placekitten.com/g/600/300", text: "a picture of a cat" },
-];
 
 const slideOpts = {
   initialSlide: 0,
@@ -59,7 +45,7 @@ let event: any = [];
 
 for (let index = 0; index < 5; index++) {
   event.push(
-    <IonSlide>
+    <IonSlide key={index}>
       <IonCard>
         <IonCardHeader>
           <IonImg src="https://i.ibb.co/jD8ypLq/files.jpg" className="files" />
@@ -135,7 +121,7 @@ const Dashboard: React.FC = () => {
           </IonCardContent>
         </IonCard>
         <IonTitle className="ion-margin-top" color="light">
-          Berita
+          Event
         </IonTitle>
         <IonSlides pager={true} options={slideOpts}>
           {event}

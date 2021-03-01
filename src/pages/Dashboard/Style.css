@@ -8,17 +8,17 @@ ion-content {
 }
 
 ion-content .slides {
-  background: #f1f5f8;
+  /* background: #f1f5f8; */
   padding: 4px 10px 20px 10px;
   border-radius: 0 0 28px 28px;
 }
 ion-content ion-card ion-card-content {
-  background: #f1f5f8;
+  /* background: #f1f5f8; */
   padding: 4px 10px 20px 10px;
   border-radius: 0 0 28px 28px;
 }
 ion-content ion-card ion-card-content ion-grid ion-row {
-  background: #f1f5f8;
+  /* background: #f1f5f8; */
   padding: 4px 10px 20px 10px;
   border-radius: 0 0 28px 28px;
 }
